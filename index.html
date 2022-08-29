@@ -1,15 +1,129 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
+    <title>لعبة الأسئلة</title>
     <!-- Css Style File -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 </head>
 <body>
+    <!-- Start Main Wapper -->
+    <section id="main-wapper">
+        <!-- Header ------->
+        <div class="header">
+            <div class="container">
+                <h1 class="title">لعبة الاسئلة</h1>
+
+                <!-- User Name -->
+                <ul class="user-box">
+                    <li class="user-item">
+                        مرحبا: <span id="user_name"></span>
+                    </li>
+                    <li class="user-item">
+                        العمر: <span id="user_age"></span>
+                    </li>
+                </ul>
+
+                <div class="questions-count">
+                    عدد الأسئلة: <span id="count">&hyphen;</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Container ------->
+        <div class="quiz-container">
+            <div class="container">
+                <!-- Question Box -->
+                <div class="question-box">
+                </div>
+
+                <!-- Answer Section ------->
+                <div class="answer-section">
+                </div>
+
+                <!-- Quiz Buttons ---->
+                <div class="quiz-btns">
+                    <button id="play" class="btn">ألعب</button>
+                    <button id="exit" class="btn">خروج</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Overlay ------->
+        <div id="user-overlay">
+            <!-- User Container -->
+            <div class="user-container" style="padding: 0 15px;">
+                <!-- User Box ------>
+                <div class="user-box">
+                    <!-- Title -->
+                    <div class="title">
+                        <!-- Heading ----->
+                        <h5 class="h3">لعبة الاسئلة</h5>
+                        <span class="text">لبدء اللعبة ادخل بياناتك</span>
+                    </div>
+
+                    <!-- User Form ----->
+                    <form action="" id="user_form">
+                        <div class="user-data">
+                            <input type="text" name="first-name" id="first_name"
+                            placeholder="الأسم الأول">
+                            <!-- Error Message -->
+                            <div class="error-msg"></div>
+                        </div>
+                        <div class="user-data">
+                            <input type="text" name="last-name" id="last_name"
+                            placeholder="الأسم الأخير">
+                            <!-- Error Message -->
+                            <div class="error-msg"></div>
+                        </div>
+                        <div class="user-data">
+                            <input type="text" name="user-age" id="user_age"
+                            placeholder="العمر">
+                        </div>
+
+                        <button class="submit" type="submit">ارسال</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- End Game Modal --->
+        <div id="endGame_modal">
+            <!-- Modal Content ------->
+            <div class="modal-content">
+                <!-- Modal Box ------->
+                <div class="modal-box">
+                    <!-- Close Modal -->
+                    <button class="close-modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                    <!-- Box Content -->
+                    <div class="box-content">
+                        <h5 class="end">اللعبة انتهت!</h5>
+
+                        <!-- score-board -->
+                        <div class="score-board">
+                            نتيجتك:
+                            <span id="score"></span>
+                            من
+                            <span id="ques-count"></span>
+                        </div>
     
+                        <!-- End Game Message -->
+                        <div class="endGame-msg">
+                        </div>
+                        <!-- Close Modal -->
+                        <button class="close-modal">اغلاق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
     <!--!=====================================================================-->
     <!-- JS App File -->
     <script src="app.js"></script>
